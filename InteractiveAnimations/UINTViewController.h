@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class UINTAnimator;
-@class UINTSpringAnimation;
-
 @interface UINTViewController : UIViewController
 
 @end

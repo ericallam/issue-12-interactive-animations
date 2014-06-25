@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A4163FBAFEF7B65B4122A12 /* UINTSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4163C5F060A17DE044D5AE /* UINTSpringAnimation.m */; };
 		83CEFD951913DD0B00F82FA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CEFD941913DD0B00F82FA4 /* Foundation.framework */; };
 		83CEFD971913DD0B00F82FA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CEFD961913DD0B00F82FA4 /* CoreGraphics.framework */; };
 		83CEFD991913DD0B00F82FA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CEFD981913DD0B00F82FA4 /* UIKit.framework */; };
@@ -22,7 +21,6 @@
 		83CEFDBE1913DD0B00F82FA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83CEFDBC1913DD0B00F82FA4 /* InfoPlist.strings */; };
 		83CEFDC01913DD0B00F82FA4 /* InteractiveAnimationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CEFDBF1913DD0B00F82FA4 /* InteractiveAnimationsTests.m */; };
 		83CEFDCB1913DEB800F82FA4 /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CEFDC91913DEB800F82FA4 /* DraggableView.m */; };
-		83CEFDD11913E00500F82FA4 /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CEFDD01913E00500F82FA4 /* Animator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +35,6 @@
 
 /* Begin PBXFileReference section */
 		5A41610843B2253ACAC1463B /* UINTGeometryExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINTGeometryExtras.h; sourceTree = "<group>"; };
-		5A4163C5F060A17DE044D5AE /* UINTSpringAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINTSpringAnimation.m; sourceTree = "<group>"; };
-		5A41674EE49361E12346E55A /* UINTSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINTSpringAnimation.h; sourceTree = "<group>"; };
 		83CEFD911913DD0B00F82FA4 /* InteractiveAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CEFD941913DD0B00F82FA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83CEFD961913DD0B00F82FA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,8 +55,6 @@
 		83CEFDBF1913DD0B00F82FA4 /* InteractiveAnimationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveAnimationsTests.m; sourceTree = "<group>"; };
 		83CEFDC91913DEB800F82FA4 /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
 		83CEFDCA1913DEB800F82FA4 /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
-		83CEFDCF1913E00500F82FA4 /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
-		83CEFDD01913E00500F82FA4 /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +114,6 @@
 		83CEFD9A1913DD0B00F82FA4 /* InteractiveAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				83CEFDCF1913E00500F82FA4 /* Animator.h */,
-				83CEFDD01913E00500F82FA4 /* Animator.m */,
 				83CEFDA31913DD0B00F82FA4 /* UINTAppDelegate.h */,
 				83CEFDA41913DD0B00F82FA4 /* UINTAppDelegate.m */,
 				83CEFDA91913DD0B00F82FA4 /* UINTViewController.h */,
@@ -131,8 +123,6 @@
 				83CEFDAC1913DD0B00F82FA4 /* Images.xcassets */,
 				83CEFD9B1913DD0B00F82FA4 /* Supporting Files */,
 				5A41610843B2253ACAC1463B /* UINTGeometryExtras.h */,
-				5A4163C5F060A17DE044D5AE /* UINTSpringAnimation.m */,
-				5A41674EE49361E12346E55A /* UINTSpringAnimation.h */,
 			);
 			path = InteractiveAnimations;
 			sourceTree = "<group>";
@@ -215,7 +205,7 @@
 				ORGANIZATIONNAME = "Unsigned Integer";
 				TargetAttributes = {
 					83CEFDB11913DD0B00F82FA4 = {
-						TestTargetID = 83CEFD901913DD0B00F82FA4 /* InteractiveAnimations */;
+						TestTargetID = 83CEFD901913DD0B00F82FA4;
 					};
 				};
 			};
@@ -266,9 +256,7 @@
 				83CEFDA51913DD0B00F82FA4 /* UINTAppDelegate.m in Sources */,
 				83CEFDA11913DD0B00F82FA4 /* main.m in Sources */,
 				83CEFDCB1913DEB800F82FA4 /* DraggableView.m in Sources */,
-				83CEFDD11913E00500F82FA4 /* Animator.m in Sources */,
 				83CEFDAB1913DD0B00F82FA4 /* UINTViewController.m in Sources */,
-				5A4163FBAFEF7B65B4122A12 /* UINTSpringAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

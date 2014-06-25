@@ -8,7 +8,6 @@
 
 #import "UINTViewController.h"
 #import "DraggableView.h"
-#import "UINTSpringAnimation.h"
 
 typedef NS_ENUM(NSInteger, PaneState) {
     PaneStateOpen,
@@ -19,7 +18,6 @@ typedef NS_ENUM(NSInteger, PaneState) {
 
 @property (nonatomic) PaneState paneState;
 @property (nonatomic, strong) DraggableView *pane;
-@property (nonatomic) UINTSpringAnimation *springAnimation;
 @end
 
 @implementation UINTViewController
@@ -50,15 +48,29 @@ typedef NS_ENUM(NSInteger, PaneState) {
 
 - (void)startAnimatingView:(DraggableView *)view initialVelocity:(CGPoint)initialVelocity
 {
-    [self cancelSpringAnimation];
-    self.springAnimation = [UINTSpringAnimation animationWithView:view target:self.targetPoint velocity:initialVelocity];
-    [view.animator addAnimation:self.springAnimation];
+    CGFloat centerY = view.center.y;
+    CGFloat targetY = self.targetPoint.y;
+    
+    CGFloat distance = ABS(targetY - centerY);
+    CGFloat initialSpringVelocity = ABS(initialVelocity.y / distance);
+    
+    [UIView animateWithDuration:0.5
+                          delay:0
+         usingSpringWithDamping:0.70
+          initialSpringVelocity:initialSpringVelocity
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:^{
+                         
+        view.center = self.targetPoint;
+                         
+    } completion:^(BOOL finished) {
+        NSLog(@"Animation finished: %@", @(finished));
+    }];
 }
 
 - (void)cancelSpringAnimation
 {
-    [self.view.animator removeAnimation:self.springAnimation];
-    self.springAnimation = nil;
+    
 }
 
 
@@ -83,7 +95,7 @@ typedef NS_ENUM(NSInteger, PaneState) {
 {
     PaneState targetState = self.paneState == PaneStateOpen ? PaneStateClosed : PaneStateOpen;
     self.paneState = targetState;
-    [self startAnimatingView:self.pane initialVelocity:self.springAnimation.velocity];
+    [self startAnimatingView:self.pane initialVelocity:CGPointZero];
 }
 
 @end
